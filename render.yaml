@@ -10,4 +10,4 @@ services:
     envVars:
       - key: ALLOWED_ORIGINS
         sync: false
-        # Set to your static site URL, e.g. https://your-app.pages.dev
+        https://line-balancing-solver.gabriel-clarence.workers.dev/
