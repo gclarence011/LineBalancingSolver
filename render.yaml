@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: line-balancing-api
+    runtime: python
+    plan: free
+    rootDir: Backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn api:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: ALLOWED_ORIGINS
+        sync: false
+        # Set to your static site URL, e.g. https://your-app.pages.dev
